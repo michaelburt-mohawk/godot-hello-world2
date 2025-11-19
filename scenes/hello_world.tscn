@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://4b5ttts25r1n"]
+[gd_scene load_steps=3 format=3 uid="uid://4b5ttts25r1n"]
+
+[ext_resource type="Script" uid="uid://b8b0r5ph5ftru" path="res://scripts/HelloWorld.cs" id="1_lxe60"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1tuuu"]
 font_size = 25
 font_color = Color(0.66999996, 0.857, 1, 1)
 
 [node name="HelloWorld" type="Node2D"]
+script = ExtResource("1_lxe60")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1165.0
@@ -17,4 +20,14 @@ offset_top = 268.0
 offset_right = 579.0
 offset_bottom = 291.0
 text = "Hello world!"
+label_settings = SubResource("LabelSettings_1tuuu")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TimeLabel" type="Label" parent="Node2D"]
+offset_left = 486.0
+offset_top = 324.0
+offset_right = 657.0
+offset_bottom = 359.0
+text = "(time elapsed)"
 label_settings = SubResource("LabelSettings_1tuuu")
